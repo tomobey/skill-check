@@ -1,5 +1,8 @@
 package q002;
 
+import java.util.Arrays;
+
+
 /**
  * Q002 並べ替える
  *
@@ -45,5 +48,18 @@ public class Q002 {
             "14,林",
             "9,清水"
     };
+
+    public static void main(String[] args) {
+        String[] list;
+        list = new String[dataList.length];
+
+        for( int i = 0 ; i < dataList.length ; i ++ ) {
+            String[] strList = dataList[i].split(",");
+            int index = Integer.valueOf(strList[0]);
+            list[index - 1] = dataList[i];
+        }
+        
+        System.out.println(Arrays.asList(list));
+    }
 }
-// 完成までの時間: xx時間 xx分
+// 完成までの時間: 1時間
